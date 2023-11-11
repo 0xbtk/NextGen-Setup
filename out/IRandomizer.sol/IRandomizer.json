@@ -1,0 +1,351 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_collectionID",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_mintIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_saltfun_o",
+          "type": "uint256"
+        }
+      ],
+      "name": "calculateTokenHash",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isRandomizerContract",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "calculateTokenHash(uint256,uint256,uint256)": "bf1b89d3",
+    "isRandomizerContract()": "4cf0c697"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_collectionID\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_mintIndex\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_saltfun_o\",\"type\":\"uint256\"}],\"name\":\"calculateTokenHash\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isRandomizerContract\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Interfaces/IRandomizer.sol\":\"IRandomizer\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/Interfaces/IRandomizer.sol\":{\"keccak256\":\"0x751d5257b5618dffde369e2e44dcbcda075135838f3a0e122d9a5a9e1076415b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7f50c510c06568a00eabd1715e85255d7f72a1d41397fafcf87e55154837cd2b\",\"dweb:/ipfs/QmXpMcCzdMQL12vwMvTbu3ZAz7nMnTtAmfP3K1U5yUw9XP\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_collectionID",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_mintIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_saltfun_o",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "calculateTokenHash"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isRandomizerContract",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/Interfaces/IRandomizer.sol": "IRandomizer"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/Interfaces/IRandomizer.sol": {
+        "keccak256": "0x751d5257b5618dffde369e2e44dcbcda075135838f3a0e122d9a5a9e1076415b",
+        "urls": [
+          "bzz-raw://7f50c510c06568a00eabd1715e85255d7f72a1d41397fafcf87e55154837cd2b",
+          "dweb:/ipfs/QmXpMcCzdMQL12vwMvTbu3ZAz7nMnTtAmfP3K1U5yUw9XP"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/Interfaces/IRandomizer.sol",
+    "id": 44466,
+    "exportedSymbols": {
+      "IRandomizer": [
+        44465
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "35:364:23",
+    "nodes": [
+      {
+        "id": 44450,
+        "nodeType": "PragmaDirective",
+        "src": "35:24:23",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 44465,
+        "nodeType": "ContractDefinition",
+        "src": "63:336:23",
+        "nodes": [
+          {
+            "id": 44459,
+            "nodeType": "FunctionDefinition",
+            "src": "182:100:23",
+            "nodes": [],
+            "functionSelector": "bf1b89d3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculateTokenHash",
+            "nameLocation": "191:18:23",
+            "parameters": {
+              "id": 44457,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44452,
+                  "mutability": "mutable",
+                  "name": "_collectionID",
+                  "nameLocation": "218:13:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44459,
+                  "src": "210:21:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44451,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "210:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44454,
+                  "mutability": "mutable",
+                  "name": "_mintIndex",
+                  "nameLocation": "241:10:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44459,
+                  "src": "233:18:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44453,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "233:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44456,
+                  "mutability": "mutable",
+                  "name": "_saltfun_o",
+                  "nameLocation": "261:10:23",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44459,
+                  "src": "253:18:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44455,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "253:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "209:63:23"
+            },
+            "returnParameters": {
+              "id": 44458,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "281:0:23"
+            },
+            "scope": 44465,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 44464,
+            "nodeType": "FunctionDefinition",
+            "src": "329:61:23",
+            "nodes": [],
+            "functionSelector": "4cf0c697",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isRandomizerContract",
+            "nameLocation": "338:20:23",
+            "parameters": {
+              "id": 44460,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "358:2:23"
+            },
+            "returnParameters": {
+              "id": 44463,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44462,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44464,
+                  "src": "384:4:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 44461,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "384:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "383:6:23"
+            },
+            "scope": 44465,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IRandomizer",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          44465
+        ],
+        "name": "IRandomizer",
+        "nameLocation": "73:11:23",
+        "scope": 44466,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 23
+}

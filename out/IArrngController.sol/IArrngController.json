@@ -1,0 +1,4027 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "requestId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ArrngRefundInsufficientTokenForGas",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint64",
+          "name": "requestId",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "method",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "numberOfNumbers",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "minValue",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "maxvalue",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "ethValue",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "refundAddress",
+          "type": "address"
+        }
+      ],
+      "name": "ArrngRequest",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "requestTxnHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "ArrngResponse",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint128",
+          "name": "requestId",
+          "type": "uint128"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "feeCharged",
+          "type": "uint128"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "randomNumbers",
+          "type": "uint256[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "apiResponse",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "apiSignature",
+          "type": "string"
+        }
+      ],
+      "name": "ArrngServed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "ensName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "ensNameHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "ENSNameSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "newENSReverseRegistrar",
+          "type": "address"
+        }
+      ],
+      "name": "ENSReverseRegistrarSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newNumberLimited",
+          "type": "uint256"
+        }
+      ],
+      "name": "MaximumNumberOfNumbersSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "minimumNativeToken",
+          "type": "uint256"
+        }
+      ],
+      "name": "MinimumNativeTokenSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "oracle",
+          "type": "address"
+        }
+      ],
+      "name": "OracleAddressSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "treasury",
+          "type": "address"
+        }
+      ],
+      "name": "TreasuryAddressSet",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "numberOfNumbers_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "minValue_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxValue_",
+          "type": "uint256"
+        }
+      ],
+      "name": "requestRandomNumbersInRange",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "uniqueID_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "numberOfNumbers_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "minValue_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxValue_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "refundAddress_",
+          "type": "address"
+        }
+      ],
+      "name": "requestRandomNumbersInRange",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "uniqueID_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "numberOfNumbers_",
+          "type": "uint256"
+        }
+      ],
+      "name": "requestRandomWords",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "uniqueID_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "numberOfNumbers_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "refundAddress_",
+          "type": "address"
+        }
+      ],
+      "name": "requestRandomWords",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "uniqueID_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "numberOfNumbers_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "minValue_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxValue_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint32",
+          "name": "method_",
+          "type": "uint32"
+        }
+      ],
+      "name": "requestWithMethod",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "uniqueID_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "numberOfNumbers_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "minValue_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxValue_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "refundAddress_",
+          "type": "address"
+        },
+        {
+          "internalType": "uint32",
+          "name": "method_",
+          "type": "uint32"
+        }
+      ],
+      "name": "requestWithMethod",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "uniqueID_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "arrngRequestId_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "callingAddress_",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "requestTxnHash_",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "responseCode_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "randomNumbers_",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "address",
+          "name": "refundAddress_",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "apiResponse_",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "apiSignature_",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "feeCharged_",
+          "type": "uint256"
+        }
+      ],
+      "name": "serveRandomness",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "ensName_",
+          "type": "string"
+        }
+      ],
+      "name": "setENSName",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "ensRegistrar_",
+          "type": "address"
+        }
+      ],
+      "name": "setENSReverseRegistrar",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "maxNumbersPerTxn_",
+          "type": "uint16"
+        }
+      ],
+      "name": "setMaximumNumberOfNumbers",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint176",
+          "name": "minNativeToken_",
+          "type": "uint176"
+        }
+      ],
+      "name": "setMinimumNativeToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "oracle_",
+          "type": "address"
+        }
+      ],
+      "name": "setOracleAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "treasury_",
+          "type": "address"
+        }
+      ],
+      "name": "setTreasuryAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "erc20Address_",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount_",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawERC20",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "erc721Address_",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "tokenIDs_",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "withdrawERC721",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount_",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawNativeToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "requestRandomNumbersInRange(uint256,uint256,uint256)": "a1b81d96",
+    "requestRandomNumbersInRange(uint256,uint256,uint256,address)": "f3e090e4",
+    "requestRandomWords(uint256)": "bc85777c",
+    "requestRandomWords(uint256,address)": "d4e0f337",
+    "requestWithMethod(uint256,uint256,uint256,address,uint32)": "9bd1a9a9",
+    "requestWithMethod(uint256,uint256,uint256,uint32)": "8b2c846a",
+    "serveRandomness(uint256,address,bytes32,uint256,uint256[],address,string,string,uint256)": "97bfe15f",
+    "setENSName(string)": "77dd4ac3",
+    "setENSReverseRegistrar(address)": "b52d1c19",
+    "setMaximumNumberOfNumbers(uint16)": "e70b3496",
+    "setMinimumNativeToken(uint176)": "558615f7",
+    "setOracleAddress(address)": "4c69c00f",
+    "setTreasuryAddress(address)": "6605bfda",
+    "withdrawERC20(address,uint256)": "a1db9782",
+    "withdrawERC721(address,uint256[])": "13edab81",
+    "withdrawNativeToken(uint256)": "17e0f252"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"requestId\",\"type\":\"uint256\"}],\"name\":\"ArrngRefundInsufficientTokenForGas\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint64\",\"name\":\"requestId\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"method\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"numberOfNumbers\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"minValue\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"maxvalue\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"uint64\",\"name\":\"ethValue\",\"type\":\"uint64\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"refundAddress\",\"type\":\"address\"}],\"name\":\"ArrngRequest\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"requestTxnHash\",\"type\":\"bytes32\"}],\"name\":\"ArrngResponse\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint128\",\"name\":\"requestId\",\"type\":\"uint128\"},{\"indexed\":false,\"internalType\":\"uint128\",\"name\":\"feeCharged\",\"type\":\"uint128\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"randomNumbers\",\"type\":\"uint256[]\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"apiResponse\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"apiSignature\",\"type\":\"string\"}],\"name\":\"ArrngServed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"ensName\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"ensNameHash\",\"type\":\"bytes32\"}],\"name\":\"ENSNameSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newENSReverseRegistrar\",\"type\":\"address\"}],\"name\":\"ENSReverseRegistrarSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newNumberLimited\",\"type\":\"uint256\"}],\"name\":\"MaximumNumberOfNumbersSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"minimumNativeToken\",\"type\":\"uint256\"}],\"name\":\"MinimumNativeTokenSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"oracle\",\"type\":\"address\"}],\"name\":\"OracleAddressSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"treasury\",\"type\":\"address\"}],\"name\":\"TreasuryAddressSet\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"numberOfNumbers_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minValue_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxValue_\",\"type\":\"uint256\"}],\"name\":\"requestRandomNumbersInRange\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"uniqueID_\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"numberOfNumbers_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minValue_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxValue_\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"refundAddress_\",\"type\":\"address\"}],\"name\":\"requestRandomNumbersInRange\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"uniqueID_\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"numberOfNumbers_\",\"type\":\"uint256\"}],\"name\":\"requestRandomWords\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"uniqueID_\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"numberOfNumbers_\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"refundAddress_\",\"type\":\"address\"}],\"name\":\"requestRandomWords\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"uniqueID_\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"numberOfNumbers_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minValue_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxValue_\",\"type\":\"uint256\"},{\"internalType\":\"uint32\",\"name\":\"method_\",\"type\":\"uint32\"}],\"name\":\"requestWithMethod\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"uniqueID_\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"numberOfNumbers_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minValue_\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxValue_\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"refundAddress_\",\"type\":\"address\"},{\"internalType\":\"uint32\",\"name\":\"method_\",\"type\":\"uint32\"}],\"name\":\"requestWithMethod\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"uniqueID_\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"arrngRequestId_\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"callingAddress_\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"requestTxnHash_\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"responseCode_\",\"type\":\"uint256\"},{\"internalType\":\"uint256[]\",\"name\":\"randomNumbers_\",\"type\":\"uint256[]\"},{\"internalType\":\"address\",\"name\":\"refundAddress_\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"apiResponse_\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"apiSignature_\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"feeCharged_\",\"type\":\"uint256\"}],\"name\":\"serveRandomness\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"ensName_\",\"type\":\"string\"}],\"name\":\"setENSName\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"ensRegistrar_\",\"type\":\"address\"}],\"name\":\"setENSReverseRegistrar\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"maxNumbersPerTxn_\",\"type\":\"uint16\"}],\"name\":\"setMaximumNumberOfNumbers\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint176\",\"name\":\"minNativeToken_\",\"type\":\"uint176\"}],\"name\":\"setMinimumNativeToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"oracle_\",\"type\":\"address\"}],\"name\":\"setOracleAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"treasury_\",\"type\":\"address\"}],\"name\":\"setTreasuryAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"erc20Address_\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount_\",\"type\":\"uint256\"}],\"name\":\"withdrawERC20\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"erc721Address_\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"tokenIDs_\",\"type\":\"uint256[]\"}],\"name\":\"withdrawERC721\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount_\",\"type\":\"uint256\"}],\"name\":\"withdrawNativeToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"requestRandomNumbersInRange(uint256,uint256,uint256)\":{\"details\":\"requestRandomNumbersInRange: request 1 to n integers within a given range (e.g. 1 to 10,000) requestRandomNumbersInRange is overloaded. In this instance you can call it without explicitly declaring a refund address, with the refund being paid to the tx.origin for this call.\",\"params\":{\"maxValue_\":\": the max of the range\",\"minValue_\":\": the min of the range\",\"numberOfNumbers_\":\": the amount of numbers to request\"},\"returns\":{\"uniqueID_\":\": unique ID for this request\"}},\"requestRandomNumbersInRange(uint256,uint256,uint256,address)\":{\"details\":\"requestRandomNumbersInRange: request 1 to n integers within a given range (e.g. 1 to 10,000) requestRandomNumbersInRange is overloaded. In this instance you must specify the refund address for unused native token.\",\"params\":{\"maxValue_\":\": the max of the range\",\"minValue_\":\": the min of the range\",\"numberOfNumbers_\":\": the amount of numbers to request\",\"refundAddress_\":\": the address for refund of native token\"},\"returns\":{\"uniqueID_\":\": unique ID for this request\"}},\"requestRandomWords(uint256)\":{\"details\":\"requestRandomWords: request 1 to n uint256 integers requestRandomWords is overloaded. In this instance you can call it without explicitly declaring a refund address, with the refund being paid to the tx.origin for this call.\",\"params\":{\"numberOfNumbers_\":\": the amount of numbers to request\"},\"returns\":{\"uniqueID_\":\": unique ID for this request\"}},\"requestRandomWords(uint256,address)\":{\"details\":\"requestRandomWords: request 1 to n uint256 integers requestRandomWords is overloaded. In this instance you must specify the refund address for unused native token.\",\"params\":{\"numberOfNumbers_\":\": the amount of numbers to request\",\"refundAddress_\":\": the address for refund of native token\"},\"returns\":{\"uniqueID_\":\": unique ID for this request\"}},\"requestWithMethod(uint256,uint256,uint256,address,uint32)\":{\"details\":\"requestWithMethod: public method to allow calls specifying the arrng method, allowing functionality to be extensible without requiring a new controller contract. requestWithMethod is overloaded. In this instance you must specify the refund address for unused native token.\",\"params\":{\"maxValue_\":\": the max of the range\",\"method_\":\": the arrng method to call\",\"minValue_\":\": the min of the range\",\"numberOfNumbers_\":\": the amount of numbers to request\",\"refundAddress_\":\": the address for refund of native token\"},\"returns\":{\"uniqueID_\":\": unique ID for this request\"}},\"requestWithMethod(uint256,uint256,uint256,uint32)\":{\"details\":\"requestWithMethod: public method to allow calls specifying the arrng method, allowing functionality to be extensible without requiring a new controller contract. requestWithMethod is overloaded. In this instance you can call it without explicitly declaring a refund address, with the refund being paid to the tx.origin for this call.\",\"params\":{\"maxValue_\":\": the max of the range\",\"method_\":\": the arrng method to call\",\"minValue_\":\": the min of the range\",\"numberOfNumbers_\":\": the amount of numbers to request\"},\"returns\":{\"uniqueID_\":\": unique ID for this request\"}},\"serveRandomness(uint256,address,bytes32,uint256,uint256[],address,string,string,uint256)\":{\"details\":\"serveRandomness: serve result of the call\",\"params\":{\"apiResponse_\":\": the response from the off-chain rng provider\",\"apiSignature_\":\": signature for the rng response\",\"arrngRequestId_\":\": unique request ID\",\"callingAddress_\":\": the contract to call\",\"feeCharged_\":\": the fee for this rng\",\"randomNumbers_\":\": the array of random integers\",\"refundAddress_\":\": the address for refund of native token not used for gas\",\"requestTxnHash_\":\": the txn hash of the original request\",\"responseCode_\":\": 0 is success, !0 = failure\"}},\"setENSName(string)\":{\"details\":\"setENSName: used to set reverse record so interactions with this contract are easy to identify\",\"params\":{\"ensName_\":\": string ENS name\"}},\"setENSReverseRegistrar(address)\":{\"details\":\"setENSReverseRegistrar: set the ENS register address\",\"params\":{\"ensRegistrar_\":\": ENS Reverse Registrar address\"}},\"setMaximumNumberOfNumbers(uint16)\":{\"details\":\"setMaximumNumberOfNumbers: set a new max number of numbers\",\"params\":{\"maxNumbersPerTxn_\":\": the new max requested numbers\"}},\"setMinimumNativeToken(uint176)\":{\"details\":\"setMinimumNativeToken: set a new value of required native token for gas\",\"params\":{\"minNativeToken_\":\": the new minimum native token per call\"}},\"setOracleAddress(address)\":{\"details\":\"setOracleAddress: set a new oracle address\",\"params\":{\"oracle_\":\": the new oracle address\"}},\"setTreasuryAddress(address)\":{\"details\":\"setTreasuryAddress: set a new treasury address\",\"params\":{\"treasury_\":\": the new treasury address\"}},\"withdrawERC20(address,uint256)\":{\"details\":\"withdrawERC20: pull ERC20 tokens to the treasuryAddress\",\"params\":{\"amount_\":\": amount to withdraw\",\"erc20Address_\":\": the contract address for the token\"}},\"withdrawERC721(address,uint256[])\":{\"details\":\"withdrawERC721: Pull ERC721s (likely only the ENS associated with this contract) to the treasuryAddress.\",\"params\":{\"erc721Address_\":\": The token contract for the withdrawal\",\"tokenIDs_\":\": the list of tokenIDs for the withdrawal\"}},\"withdrawNativeToken(uint256)\":{\"details\":\"withdrawNativeToken: pull native token to the treasuryAddress\",\"params\":{\"amount_\":\": amount to withdraw\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/arrng/IArrngController.sol\":\"IArrngController\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/arrng/IArrngController.sol\":{\"keccak256\":\"0x33d57eee311e463974abe7bb07a5d608196ce583e02fb9ce66feffa110eba26f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8302945fcd89f6654465f5261dd14905af1777d9e3fe905102bc37941b18a91d\",\"dweb:/ipfs/QmcQihdry61N11XjrZfK1aAttsqPMB6famwWupCDNnoGhT\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "caller",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "requestId",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ArrngRefundInsufficientTokenForGas",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "caller",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint64",
+              "name": "requestId",
+              "type": "uint64",
+              "indexed": true
+            },
+            {
+              "internalType": "uint32",
+              "name": "method",
+              "type": "uint32",
+              "indexed": false
+            },
+            {
+              "internalType": "uint64",
+              "name": "numberOfNumbers",
+              "type": "uint64",
+              "indexed": false
+            },
+            {
+              "internalType": "uint64",
+              "name": "minValue",
+              "type": "uint64",
+              "indexed": false
+            },
+            {
+              "internalType": "uint64",
+              "name": "maxvalue",
+              "type": "uint64",
+              "indexed": false
+            },
+            {
+              "internalType": "uint64",
+              "name": "ethValue",
+              "type": "uint64",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "refundAddress",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ArrngRequest",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "requestTxnHash",
+              "type": "bytes32",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ArrngResponse",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint128",
+              "name": "requestId",
+              "type": "uint128",
+              "indexed": true
+            },
+            {
+              "internalType": "uint128",
+              "name": "feeCharged",
+              "type": "uint128",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "randomNumbers",
+              "type": "uint256[]",
+              "indexed": false
+            },
+            {
+              "internalType": "string",
+              "name": "apiResponse",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "string",
+              "name": "apiSignature",
+              "type": "string",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ArrngServed",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "ensName",
+              "type": "string",
+              "indexed": false
+            },
+            {
+              "internalType": "bytes32",
+              "name": "ensNameHash",
+              "type": "bytes32",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ENSNameSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "newENSReverseRegistrar",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ENSReverseRegistrarSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "newNumberLimited",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "MaximumNumberOfNumbersSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "minimumNativeToken",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "MinimumNativeTokenSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "oracle",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "OracleAddressSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "treasury",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "TreasuryAddressSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "numberOfNumbers_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minValue_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxValue_",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "requestRandomNumbersInRange",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "uniqueID_",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "numberOfNumbers_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minValue_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxValue_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "refundAddress_",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "requestRandomNumbersInRange",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "uniqueID_",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "numberOfNumbers_",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "requestRandomWords",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "uniqueID_",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "numberOfNumbers_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "refundAddress_",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "requestRandomWords",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "uniqueID_",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "numberOfNumbers_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minValue_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxValue_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint32",
+              "name": "method_",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "requestWithMethod",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "uniqueID_",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "numberOfNumbers_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minValue_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxValue_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "refundAddress_",
+              "type": "address"
+            },
+            {
+              "internalType": "uint32",
+              "name": "method_",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "requestWithMethod",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "uniqueID_",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "arrngRequestId_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "callingAddress_",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "requestTxnHash_",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "responseCode_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "randomNumbers_",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "address",
+              "name": "refundAddress_",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "apiResponse_",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "apiSignature_",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "feeCharged_",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "serveRandomness"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "ensName_",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setENSName"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "ensRegistrar_",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setENSReverseRegistrar"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint16",
+              "name": "maxNumbersPerTxn_",
+              "type": "uint16"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setMaximumNumberOfNumbers"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint176",
+              "name": "minNativeToken_",
+              "type": "uint176"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setMinimumNativeToken"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address payable",
+              "name": "oracle_",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setOracleAddress"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address payable",
+              "name": "treasury_",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setTreasuryAddress"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "erc20Address_",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount_",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawERC20"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "erc721Address_",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "tokenIDs_",
+              "type": "uint256[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawERC721"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "amount_",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawNativeToken"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "requestRandomNumbersInRange(uint256,uint256,uint256)": {
+            "details": "requestRandomNumbersInRange: request 1 to n integers within a given range (e.g. 1 to 10,000) requestRandomNumbersInRange is overloaded. In this instance you can call it without explicitly declaring a refund address, with the refund being paid to the tx.origin for this call.",
+            "params": {
+              "maxValue_": ": the max of the range",
+              "minValue_": ": the min of the range",
+              "numberOfNumbers_": ": the amount of numbers to request"
+            },
+            "returns": {
+              "uniqueID_": ": unique ID for this request"
+            }
+          },
+          "requestRandomNumbersInRange(uint256,uint256,uint256,address)": {
+            "details": "requestRandomNumbersInRange: request 1 to n integers within a given range (e.g. 1 to 10,000) requestRandomNumbersInRange is overloaded. In this instance you must specify the refund address for unused native token.",
+            "params": {
+              "maxValue_": ": the max of the range",
+              "minValue_": ": the min of the range",
+              "numberOfNumbers_": ": the amount of numbers to request",
+              "refundAddress_": ": the address for refund of native token"
+            },
+            "returns": {
+              "uniqueID_": ": unique ID for this request"
+            }
+          },
+          "requestRandomWords(uint256)": {
+            "details": "requestRandomWords: request 1 to n uint256 integers requestRandomWords is overloaded. In this instance you can call it without explicitly declaring a refund address, with the refund being paid to the tx.origin for this call.",
+            "params": {
+              "numberOfNumbers_": ": the amount of numbers to request"
+            },
+            "returns": {
+              "uniqueID_": ": unique ID for this request"
+            }
+          },
+          "requestRandomWords(uint256,address)": {
+            "details": "requestRandomWords: request 1 to n uint256 integers requestRandomWords is overloaded. In this instance you must specify the refund address for unused native token.",
+            "params": {
+              "numberOfNumbers_": ": the amount of numbers to request",
+              "refundAddress_": ": the address for refund of native token"
+            },
+            "returns": {
+              "uniqueID_": ": unique ID for this request"
+            }
+          },
+          "requestWithMethod(uint256,uint256,uint256,address,uint32)": {
+            "details": "requestWithMethod: public method to allow calls specifying the arrng method, allowing functionality to be extensible without requiring a new controller contract. requestWithMethod is overloaded. In this instance you must specify the refund address for unused native token.",
+            "params": {
+              "maxValue_": ": the max of the range",
+              "method_": ": the arrng method to call",
+              "minValue_": ": the min of the range",
+              "numberOfNumbers_": ": the amount of numbers to request",
+              "refundAddress_": ": the address for refund of native token"
+            },
+            "returns": {
+              "uniqueID_": ": unique ID for this request"
+            }
+          },
+          "requestWithMethod(uint256,uint256,uint256,uint32)": {
+            "details": "requestWithMethod: public method to allow calls specifying the arrng method, allowing functionality to be extensible without requiring a new controller contract. requestWithMethod is overloaded. In this instance you can call it without explicitly declaring a refund address, with the refund being paid to the tx.origin for this call.",
+            "params": {
+              "maxValue_": ": the max of the range",
+              "method_": ": the arrng method to call",
+              "minValue_": ": the min of the range",
+              "numberOfNumbers_": ": the amount of numbers to request"
+            },
+            "returns": {
+              "uniqueID_": ": unique ID for this request"
+            }
+          },
+          "serveRandomness(uint256,address,bytes32,uint256,uint256[],address,string,string,uint256)": {
+            "details": "serveRandomness: serve result of the call",
+            "params": {
+              "apiResponse_": ": the response from the off-chain rng provider",
+              "apiSignature_": ": signature for the rng response",
+              "arrngRequestId_": ": unique request ID",
+              "callingAddress_": ": the contract to call",
+              "feeCharged_": ": the fee for this rng",
+              "randomNumbers_": ": the array of random integers",
+              "refundAddress_": ": the address for refund of native token not used for gas",
+              "requestTxnHash_": ": the txn hash of the original request",
+              "responseCode_": ": 0 is success, !0 = failure"
+            }
+          },
+          "setENSName(string)": {
+            "details": "setENSName: used to set reverse record so interactions with this contract are easy to identify",
+            "params": {
+              "ensName_": ": string ENS name"
+            }
+          },
+          "setENSReverseRegistrar(address)": {
+            "details": "setENSReverseRegistrar: set the ENS register address",
+            "params": {
+              "ensRegistrar_": ": ENS Reverse Registrar address"
+            }
+          },
+          "setMaximumNumberOfNumbers(uint16)": {
+            "details": "setMaximumNumberOfNumbers: set a new max number of numbers",
+            "params": {
+              "maxNumbersPerTxn_": ": the new max requested numbers"
+            }
+          },
+          "setMinimumNativeToken(uint176)": {
+            "details": "setMinimumNativeToken: set a new value of required native token for gas",
+            "params": {
+              "minNativeToken_": ": the new minimum native token per call"
+            }
+          },
+          "setOracleAddress(address)": {
+            "details": "setOracleAddress: set a new oracle address",
+            "params": {
+              "oracle_": ": the new oracle address"
+            }
+          },
+          "setTreasuryAddress(address)": {
+            "details": "setTreasuryAddress: set a new treasury address",
+            "params": {
+              "treasury_": ": the new treasury address"
+            }
+          },
+          "withdrawERC20(address,uint256)": {
+            "details": "withdrawERC20: pull ERC20 tokens to the treasuryAddress",
+            "params": {
+              "amount_": ": amount to withdraw",
+              "erc20Address_": ": the contract address for the token"
+            }
+          },
+          "withdrawERC721(address,uint256[])": {
+            "details": "withdrawERC721: Pull ERC721s (likely only the ENS associated with this contract) to the treasuryAddress.",
+            "params": {
+              "erc721Address_": ": The token contract for the withdrawal",
+              "tokenIDs_": ": the list of tokenIDs for the withdrawal"
+            }
+          },
+          "withdrawNativeToken(uint256)": {
+            "details": "withdrawNativeToken: pull native token to the treasuryAddress",
+            "params": {
+              "amount_": ": amount to withdraw"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/arrng/IArrngController.sol": "IArrngController"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/arrng/IArrngController.sol": {
+        "keccak256": "0x33d57eee311e463974abe7bb07a5d608196ce583e02fb9ce66feffa110eba26f",
+        "urls": [
+          "bzz-raw://8302945fcd89f6654465f5261dd14905af1777d9e3fe905102bc37941b18a91d",
+          "dweb:/ipfs/QmcQihdry61N11XjrZfK1aAttsqPMB6famwWupCDNnoGhT"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/arrng/IArrngController.sol",
+    "id": 50930,
+    "exportedSymbols": {
+      "IArrngController": [
+        50929
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "163:8765:37",
+    "nodes": [
+      {
+        "id": 50705,
+        "nodeType": "PragmaDirective",
+        "src": "163:23:37",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 50929,
+        "nodeType": "ContractDefinition",
+        "src": "190:8738:37",
+        "nodes": [
+          {
+            "id": 50709,
+            "nodeType": "EventDefinition",
+            "src": "222:61:37",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "24625640821500d1ed82bf4cfa7973b775a4403ba28f029db24efa6b80241aac",
+            "name": "ENSReverseRegistrarSet",
+            "nameLocation": "228:22:37",
+            "parameters": {
+              "id": 50708,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50707,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "newENSReverseRegistrar",
+                  "nameLocation": "259:22:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50709,
+                  "src": "251:30:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50706,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "251:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "250:32:37"
+            }
+          },
+          {
+            "id": 50715,
+            "nodeType": "EventDefinition",
+            "src": "287:54:37",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "1e35a1a96eba8b2f2c87d5ef9a703b36193b12ed0ec2c11bbf35437703dd504b",
+            "name": "ENSNameSet",
+            "nameLocation": "293:10:37",
+            "parameters": {
+              "id": 50714,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50711,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "ensName",
+                  "nameLocation": "311:7:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50715,
+                  "src": "304:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 50710,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "304:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50713,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "ensNameHash",
+                  "nameLocation": "328:11:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50715,
+                  "src": "320:19:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 50712,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "320:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "303:37:37"
+            }
+          },
+          {
+            "id": 50719,
+            "nodeType": "EventDefinition",
+            "src": "345:56:37",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "81c1467f6ed8e906874cbd13844312f7ef450d069d2fb03a2bf037bd01b6a611",
+            "name": "MinimumNativeTokenSet",
+            "nameLocation": "351:21:37",
+            "parameters": {
+              "id": 50718,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50717,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "minimumNativeToken",
+                  "nameLocation": "381:18:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50719,
+                  "src": "373:26:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50716,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "373:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "372:28:37"
+            }
+          },
+          {
+            "id": 50723,
+            "nodeType": "EventDefinition",
+            "src": "405:58:37",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "943e9efb30a1f63dc3548baa55ae4bcf7d8af831a0539ab48ccc08d9f2c58a0d",
+            "name": "MaximumNumberOfNumbersSet",
+            "nameLocation": "411:25:37",
+            "parameters": {
+              "id": 50722,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50721,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "newNumberLimited",
+                  "nameLocation": "445:16:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50723,
+                  "src": "437:24:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50720,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "437:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "436:26:37"
+            }
+          },
+          {
+            "id": 50727,
+            "nodeType": "EventDefinition",
+            "src": "467:39:37",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "dd82bdfc28fcc826c53263dc2a2b6083e27e92699ebfee617227e08e21c202f0",
+            "name": "OracleAddressSet",
+            "nameLocation": "473:16:37",
+            "parameters": {
+              "id": 50726,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50725,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "oracle",
+                  "nameLocation": "498:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50727,
+                  "src": "490:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50724,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "490:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "489:16:37"
+            }
+          },
+          {
+            "id": 50731,
+            "nodeType": "EventDefinition",
+            "src": "510:43:37",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "5cc4bdb402e519d4921d6bfaca9c17c16ea3a8e658ff5accd29e6080635562ce",
+            "name": "TreasuryAddressSet",
+            "nameLocation": "516:18:37",
+            "parameters": {
+              "id": 50730,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50729,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "treasury",
+                  "nameLocation": "543:8:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50731,
+                  "src": "535:16:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50728,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "535:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "534:18:37"
+            }
+          },
+          {
+            "id": 50749,
+            "nodeType": "EventDefinition",
+            "src": "557:227:37",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "a3097c9e913577149004678bcd9af9e87f11dc65f0157774aed42c32703599ec",
+            "name": "ArrngRequest",
+            "nameLocation": "563:12:37",
+            "parameters": {
+              "id": 50748,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50733,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "caller",
+                  "nameLocation": "598:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50749,
+                  "src": "582:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50732,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "582:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50735,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "requestId",
+                  "nameLocation": "626:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50749,
+                  "src": "611:24:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 50734,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "611:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50737,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "method",
+                  "nameLocation": "649:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50749,
+                  "src": "642:13:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 50736,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "642:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50739,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "numberOfNumbers",
+                  "nameLocation": "669:15:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50749,
+                  "src": "662:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 50738,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "662:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50741,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "minValue",
+                  "nameLocation": "698:8:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50749,
+                  "src": "691:15:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 50740,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "691:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50743,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "maxvalue",
+                  "nameLocation": "720:8:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50749,
+                  "src": "713:15:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 50742,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "713:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50745,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "ethValue",
+                  "nameLocation": "742:8:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50749,
+                  "src": "735:15:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 50744,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "735:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50747,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "refundAddress",
+                  "nameLocation": "765:13:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50749,
+                  "src": "757:21:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50746,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "757:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "575:208:37"
+            }
+          },
+          {
+            "id": 50753,
+            "nodeType": "EventDefinition",
+            "src": "788:44:37",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "287b566bd1c5e155fea4e6b0b27a03fc60495accd83b90f63d3e472031749e80",
+            "name": "ArrngResponse",
+            "nameLocation": "794:13:37",
+            "parameters": {
+              "id": 50752,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50751,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "requestTxnHash",
+                  "nameLocation": "816:14:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50753,
+                  "src": "808:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 50750,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "808:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "807:24:37"
+            }
+          },
+          {
+            "id": 50766,
+            "nodeType": "EventDefinition",
+            "src": "836:161:37",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "2f4e34c2e65889cb3bd8836a6aa41071c3b123bc7277a740070decb05c144f00",
+            "name": "ArrngServed",
+            "nameLocation": "842:11:37",
+            "parameters": {
+              "id": 50765,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50755,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "requestId",
+                  "nameLocation": "876:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50766,
+                  "src": "860:25:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 50754,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "860:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50757,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "feeCharged",
+                  "nameLocation": "900:10:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50766,
+                  "src": "892:18:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 50756,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "892:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50760,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "randomNumbers",
+                  "nameLocation": "927:13:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50766,
+                  "src": "917:23:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 50758,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "917:7:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 50759,
+                    "nodeType": "ArrayTypeName",
+                    "src": "917:9:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50762,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "apiResponse",
+                  "nameLocation": "954:11:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50766,
+                  "src": "947:18:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 50761,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "947:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50764,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "apiSignature",
+                  "nameLocation": "979:12:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50766,
+                  "src": "972:19:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 50763,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "972:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "853:143:37"
+            }
+          },
+          {
+            "id": 50772,
+            "nodeType": "EventDefinition",
+            "src": "1001:99:37",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "e6ddfbdd5ed4c905f0494be8d48d3fae5e7d78a848d6fec1de1fd4a4b14c36e9",
+            "name": "ArrngRefundInsufficientTokenForGas",
+            "nameLocation": "1007:34:37",
+            "parameters": {
+              "id": 50771,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50768,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "caller",
+                  "nameLocation": "1064:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50772,
+                  "src": "1048:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50767,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1048:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50770,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "requestId",
+                  "nameLocation": "1085:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50772,
+                  "src": "1077:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50769,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1077:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1041:58:37"
+            }
+          },
+          {
+            "id": 50778,
+            "nodeType": "FunctionDefinition",
+            "src": "1438:64:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50773,
+              "nodeType": "StructuredDocumentation",
+              "src": "1284:150:37",
+              "text": " @dev setENSReverseRegistrar: set the ENS register address\n @param ensRegistrar_: ENS Reverse Registrar address"
+            },
+            "functionSelector": "b52d1c19",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setENSReverseRegistrar",
+            "nameLocation": "1447:22:37",
+            "parameters": {
+              "id": 50776,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50775,
+                  "mutability": "mutable",
+                  "name": "ensRegistrar_",
+                  "nameLocation": "1478:13:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50778,
+                  "src": "1470:21:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50774,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1470:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1469:23:37"
+            },
+            "returnParameters": {
+              "id": 50777,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1501:0:37"
+            },
+            "scope": 50929,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50784,
+            "nodeType": "FunctionDefinition",
+            "src": "1691:53:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50779,
+              "nodeType": "StructuredDocumentation",
+              "src": "1508:179:37",
+              "text": " @dev setENSName: used to set reverse record so interactions with this contract\n are easy to identify\n @param ensName_: string ENS name"
+            },
+            "functionSelector": "77dd4ac3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setENSName",
+            "nameLocation": "1700:10:37",
+            "parameters": {
+              "id": 50782,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50781,
+                  "mutability": "mutable",
+                  "name": "ensName_",
+                  "nameLocation": "1725:8:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50784,
+                  "src": "1711:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 50780,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1711:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1710:24:37"
+            },
+            "returnParameters": {
+              "id": 50783,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1743:0:37"
+            },
+            "scope": 50929,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50790,
+            "nodeType": "FunctionDefinition",
+            "src": "1933:65:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50785,
+              "nodeType": "StructuredDocumentation",
+              "src": "1750:179:37",
+              "text": " @dev setMinimumNativeToken: set a new value of required native token for gas\n @param minNativeToken_: the new minimum native token per call"
+            },
+            "functionSelector": "558615f7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMinimumNativeToken",
+            "nameLocation": "1942:21:37",
+            "parameters": {
+              "id": 50788,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50787,
+                  "mutability": "mutable",
+                  "name": "minNativeToken_",
+                  "nameLocation": "1972:15:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50790,
+                  "src": "1964:23:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint176",
+                    "typeString": "uint176"
+                  },
+                  "typeName": {
+                    "id": 50786,
+                    "name": "uint176",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1964:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint176",
+                      "typeString": "uint176"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1963:25:37"
+            },
+            "returnParameters": {
+              "id": 50789,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1997:0:37"
+            },
+            "scope": 50929,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50796,
+            "nodeType": "FunctionDefinition",
+            "src": "2168:70:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50791,
+              "nodeType": "StructuredDocumentation",
+              "src": "2004:160:37",
+              "text": " @dev setMaximumNumberOfNumbers: set a new max number of numbers\n @param maxNumbersPerTxn_: the new max requested numbers"
+            },
+            "functionSelector": "e70b3496",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMaximumNumberOfNumbers",
+            "nameLocation": "2177:25:37",
+            "parameters": {
+              "id": 50794,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50793,
+                  "mutability": "mutable",
+                  "name": "maxNumbersPerTxn_",
+                  "nameLocation": "2210:17:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50796,
+                  "src": "2203:24:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 50792,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2203:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2202:26:37"
+            },
+            "returnParameters": {
+              "id": 50795,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2237:0:37"
+            },
+            "scope": 50929,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50802,
+            "nodeType": "FunctionDefinition",
+            "src": "2375:60:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50797,
+              "nodeType": "StructuredDocumentation",
+              "src": "2244:127:37",
+              "text": " @dev setOracleAddress: set a new oracle address\n @param oracle_: the new oracle address"
+            },
+            "functionSelector": "4c69c00f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setOracleAddress",
+            "nameLocation": "2384:16:37",
+            "parameters": {
+              "id": 50800,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50799,
+                  "mutability": "mutable",
+                  "name": "oracle_",
+                  "nameLocation": "2417:7:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50802,
+                  "src": "2401:23:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 50798,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2401:15:37",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2400:25:37"
+            },
+            "returnParameters": {
+              "id": 50801,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2434:0:37"
+            },
+            "scope": 50929,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50808,
+            "nodeType": "FunctionDefinition",
+            "src": "2580:64:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50803,
+              "nodeType": "StructuredDocumentation",
+              "src": "2441:135:37",
+              "text": " @dev setTreasuryAddress: set a new treasury address\n @param treasury_: the new treasury address"
+            },
+            "functionSelector": "6605bfda",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTreasuryAddress",
+            "nameLocation": "2589:18:37",
+            "parameters": {
+              "id": 50806,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50805,
+                  "mutability": "mutable",
+                  "name": "treasury_",
+                  "nameLocation": "2624:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50808,
+                  "src": "2608:25:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 50804,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2608:15:37",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2607:27:37"
+            },
+            "returnParameters": {
+              "id": 50807,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2643:0:37"
+            },
+            "scope": 50929,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50814,
+            "nodeType": "FunctionDefinition",
+            "src": "2796:55:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50809,
+              "nodeType": "StructuredDocumentation",
+              "src": "2650:142:37",
+              "text": " @dev withdrawNativeToken: pull native token to the treasuryAddress\n @param amount_: amount to withdraw"
+            },
+            "functionSelector": "17e0f252",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawNativeToken",
+            "nameLocation": "2805:19:37",
+            "parameters": {
+              "id": 50812,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50811,
+                  "mutability": "mutable",
+                  "name": "amount_",
+                  "nameLocation": "2833:7:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50814,
+                  "src": "2825:15:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50810,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2825:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2824:17:37"
+            },
+            "returnParameters": {
+              "id": 50813,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2850:0:37"
+            },
+            "scope": 50929,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50822,
+            "nodeType": "FunctionDefinition",
+            "src": "3060:72:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50815,
+              "nodeType": "StructuredDocumentation",
+              "src": "2857:199:37",
+              "text": " @dev withdrawERC20: pull ERC20 tokens to the treasuryAddress\n @param erc20Address_: the contract address for the token\n @param amount_: amount to withdraw"
+            },
+            "functionSelector": "a1db9782",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawERC20",
+            "nameLocation": "3069:13:37",
+            "parameters": {
+              "id": 50820,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50817,
+                  "mutability": "mutable",
+                  "name": "erc20Address_",
+                  "nameLocation": "3091:13:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50822,
+                  "src": "3083:21:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50816,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3083:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50819,
+                  "mutability": "mutable",
+                  "name": "amount_",
+                  "nameLocation": "3114:7:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50822,
+                  "src": "3106:15:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50818,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3106:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3082:40:37"
+            },
+            "returnParameters": {
+              "id": 50821,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3131:0:37"
+            },
+            "scope": 50929,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50831,
+            "nodeType": "FunctionDefinition",
+            "src": "3423:100:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50823,
+              "nodeType": "StructuredDocumentation",
+              "src": "3138:281:37",
+              "text": " @dev withdrawERC721: Pull ERC721s (likely only the ENS\n associated with this contract) to the treasuryAddress.\n @param erc721Address_: The token contract for the withdrawal\n @param tokenIDs_: the list of tokenIDs for the withdrawal"
+            },
+            "functionSelector": "13edab81",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawERC721",
+            "nameLocation": "3432:14:37",
+            "parameters": {
+              "id": 50829,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50825,
+                  "mutability": "mutable",
+                  "name": "erc721Address_",
+                  "nameLocation": "3461:14:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50831,
+                  "src": "3453:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50824,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3453:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50828,
+                  "mutability": "mutable",
+                  "name": "tokenIDs_",
+                  "nameLocation": "3499:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50831,
+                  "src": "3482:26:37",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 50826,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "3482:7:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 50827,
+                    "nodeType": "ArrayTypeName",
+                    "src": "3482:9:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3446:67:37"
+            },
+            "returnParameters": {
+              "id": 50830,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3522:0:37"
+            },
+            "scope": 50929,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50839,
+            "nodeType": "FunctionDefinition",
+            "src": "4112:109:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50832,
+              "nodeType": "StructuredDocumentation",
+              "src": "3709:399:37",
+              "text": " @dev requestRandomWords: request 1 to n uint256 integers\n requestRandomWords is overloaded. In this instance you can\n call it without explicitly declaring a refund address, with the\n refund being paid to the tx.origin for this call.\n @param numberOfNumbers_: the amount of numbers to request\n @return uniqueID_ : unique ID for this request"
+            },
+            "functionSelector": "bc85777c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestRandomWords",
+            "nameLocation": "4121:18:37",
+            "parameters": {
+              "id": 50835,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50834,
+                  "mutability": "mutable",
+                  "name": "numberOfNumbers_",
+                  "nameLocation": "4154:16:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50839,
+                  "src": "4146:24:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50833,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4146:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4139:36:37"
+            },
+            "returnParameters": {
+              "id": 50838,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50837,
+                  "mutability": "mutable",
+                  "name": "uniqueID_",
+                  "nameLocation": "4210:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50839,
+                  "src": "4202:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50836,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4202:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4201:19:37"
+            },
+            "scope": 50929,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50849,
+            "nodeType": "FunctionDefinition",
+            "src": "4631:138:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50840,
+              "nodeType": "StructuredDocumentation",
+              "src": "4227:400:37",
+              "text": " @dev requestRandomWords: request 1 to n uint256 integers\n requestRandomWords is overloaded. In this instance you must\n specify the refund address for unused native token.\n @param numberOfNumbers_: the amount of numbers to request\n @param refundAddress_: the address for refund of native token\n @return uniqueID_ : unique ID for this request"
+            },
+            "functionSelector": "d4e0f337",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestRandomWords",
+            "nameLocation": "4640:18:37",
+            "parameters": {
+              "id": 50845,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50842,
+                  "mutability": "mutable",
+                  "name": "numberOfNumbers_",
+                  "nameLocation": "4673:16:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50849,
+                  "src": "4665:24:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50841,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4665:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50844,
+                  "mutability": "mutable",
+                  "name": "refundAddress_",
+                  "nameLocation": "4704:14:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50849,
+                  "src": "4696:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50843,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4696:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4658:65:37"
+            },
+            "returnParameters": {
+              "id": 50848,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50847,
+                  "mutability": "mutable",
+                  "name": "uniqueID_",
+                  "nameLocation": "4758:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50849,
+                  "src": "4750:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50846,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4750:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4749:19:37"
+            },
+            "scope": 50929,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50861,
+            "nodeType": "FunctionDefinition",
+            "src": "5324:166:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50850,
+              "nodeType": "StructuredDocumentation",
+              "src": "4775:545:37",
+              "text": " @dev requestRandomNumbersInRange: request 1 to n integers within\n a given range (e.g. 1 to 10,000)\n requestRandomNumbersInRange is overloaded. In this instance you can\n call it without explicitly declaring a refund address, with the\n refund being paid to the tx.origin for this call.\n @param numberOfNumbers_: the amount of numbers to request\n @param minValue_: the min of the range\n @param maxValue_: the max of the range\n @return uniqueID_ : unique ID for this request"
+            },
+            "functionSelector": "a1b81d96",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestRandomNumbersInRange",
+            "nameLocation": "5333:27:37",
+            "parameters": {
+              "id": 50857,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50852,
+                  "mutability": "mutable",
+                  "name": "numberOfNumbers_",
+                  "nameLocation": "5375:16:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50861,
+                  "src": "5367:24:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50851,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5367:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50854,
+                  "mutability": "mutable",
+                  "name": "minValue_",
+                  "nameLocation": "5406:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50861,
+                  "src": "5398:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50853,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5398:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50856,
+                  "mutability": "mutable",
+                  "name": "maxValue_",
+                  "nameLocation": "5430:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50861,
+                  "src": "5422:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50855,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5422:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5360:84:37"
+            },
+            "returnParameters": {
+              "id": 50860,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50859,
+                  "mutability": "mutable",
+                  "name": "uniqueID_",
+                  "nameLocation": "5479:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50861,
+                  "src": "5471:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50858,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5471:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5470:19:37"
+            },
+            "scope": 50929,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50875,
+            "nodeType": "FunctionDefinition",
+            "src": "6048:195:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50862,
+              "nodeType": "StructuredDocumentation",
+              "src": "5496:546:37",
+              "text": " @dev requestRandomNumbersInRange: request 1 to n integers within\n a given range (e.g. 1 to 10,000)\n requestRandomNumbersInRange is overloaded. In this instance you must\n specify the refund address for unused native token.\n @param numberOfNumbers_: the amount of numbers to request\n @param minValue_: the min of the range\n @param maxValue_: the max of the range\n @param refundAddress_: the address for refund of native token\n @return uniqueID_ : unique ID for this request"
+            },
+            "functionSelector": "f3e090e4",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestRandomNumbersInRange",
+            "nameLocation": "6057:27:37",
+            "parameters": {
+              "id": 50871,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50864,
+                  "mutability": "mutable",
+                  "name": "numberOfNumbers_",
+                  "nameLocation": "6099:16:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50875,
+                  "src": "6091:24:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50863,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6091:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50866,
+                  "mutability": "mutable",
+                  "name": "minValue_",
+                  "nameLocation": "6130:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50875,
+                  "src": "6122:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50865,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6122:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50868,
+                  "mutability": "mutable",
+                  "name": "maxValue_",
+                  "nameLocation": "6154:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50875,
+                  "src": "6146:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50867,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6146:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50870,
+                  "mutability": "mutable",
+                  "name": "refundAddress_",
+                  "nameLocation": "6178:14:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50875,
+                  "src": "6170:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50869,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6170:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6084:113:37"
+            },
+            "returnParameters": {
+              "id": 50874,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50873,
+                  "mutability": "mutable",
+                  "name": "uniqueID_",
+                  "nameLocation": "6232:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50875,
+                  "src": "6224:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50872,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6224:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6223:19:37"
+            },
+            "scope": 50929,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50889,
+            "nodeType": "FunctionDefinition",
+            "src": "6910:177:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50876,
+              "nodeType": "StructuredDocumentation",
+              "src": "6249:657:37",
+              "text": " @dev requestWithMethod: public method to allow calls specifying the\n arrng method, allowing functionality to be extensible without\n requiring a new controller contract.\n requestWithMethod is overloaded. In this instance you can\n call it without explicitly declaring a refund address, with the\n refund being paid to the tx.origin for this call.\n @param numberOfNumbers_: the amount of numbers to request\n @param minValue_: the min of the range\n @param maxValue_: the max of the range\n @param method_: the arrng method to call\n @return uniqueID_ : unique ID for this request"
+            },
+            "functionSelector": "8b2c846a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestWithMethod",
+            "nameLocation": "6919:17:37",
+            "parameters": {
+              "id": 50885,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50878,
+                  "mutability": "mutable",
+                  "name": "numberOfNumbers_",
+                  "nameLocation": "6951:16:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50889,
+                  "src": "6943:24:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50877,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6943:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50880,
+                  "mutability": "mutable",
+                  "name": "minValue_",
+                  "nameLocation": "6982:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50889,
+                  "src": "6974:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50879,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6974:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50882,
+                  "mutability": "mutable",
+                  "name": "maxValue_",
+                  "nameLocation": "7006:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50889,
+                  "src": "6998:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50881,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6998:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50884,
+                  "mutability": "mutable",
+                  "name": "method_",
+                  "nameLocation": "7029:7:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50889,
+                  "src": "7022:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 50883,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7022:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6936:105:37"
+            },
+            "returnParameters": {
+              "id": 50888,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50887,
+                  "mutability": "mutable",
+                  "name": "uniqueID_",
+                  "nameLocation": "7076:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50889,
+                  "src": "7068:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50886,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7068:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7067:19:37"
+            },
+            "scope": 50929,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50905,
+            "nodeType": "FunctionDefinition",
+            "src": "7755:206:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50890,
+              "nodeType": "StructuredDocumentation",
+              "src": "7093:658:37",
+              "text": " @dev requestWithMethod: public method to allow calls specifying the\n arrng method, allowing functionality to be extensible without\n requiring a new controller contract.\n requestWithMethod is overloaded. In this instance you must\n specify the refund address for unused native token.\n @param numberOfNumbers_: the amount of numbers to request\n @param minValue_: the min of the range\n @param maxValue_: the max of the range\n @param refundAddress_: the address for refund of native token\n @param method_: the arrng method to call\n @return uniqueID_ : unique ID for this request"
+            },
+            "functionSelector": "9bd1a9a9",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestWithMethod",
+            "nameLocation": "7764:17:37",
+            "parameters": {
+              "id": 50901,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50892,
+                  "mutability": "mutable",
+                  "name": "numberOfNumbers_",
+                  "nameLocation": "7796:16:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50905,
+                  "src": "7788:24:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50891,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7788:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50894,
+                  "mutability": "mutable",
+                  "name": "minValue_",
+                  "nameLocation": "7827:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50905,
+                  "src": "7819:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50893,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7819:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50896,
+                  "mutability": "mutable",
+                  "name": "maxValue_",
+                  "nameLocation": "7851:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50905,
+                  "src": "7843:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50895,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7843:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50898,
+                  "mutability": "mutable",
+                  "name": "refundAddress_",
+                  "nameLocation": "7875:14:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50905,
+                  "src": "7867:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50897,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7867:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50900,
+                  "mutability": "mutable",
+                  "name": "method_",
+                  "nameLocation": "7903:7:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50905,
+                  "src": "7896:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 50899,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7896:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7781:134:37"
+            },
+            "returnParameters": {
+              "id": 50904,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50903,
+                  "mutability": "mutable",
+                  "name": "uniqueID_",
+                  "nameLocation": "7950:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50905,
+                  "src": "7942:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50902,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7942:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7941:19:37"
+            },
+            "scope": 50929,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 50928,
+            "nodeType": "FunctionDefinition",
+            "src": "8594:331:37",
+            "nodes": [],
+            "documentation": {
+              "id": 50906,
+              "nodeType": "StructuredDocumentation",
+              "src": "7967:623:37",
+              "text": " @dev serveRandomness: serve result of the call\n @param arrngRequestId_: unique request ID\n @param callingAddress_: the contract to call\n @param requestTxnHash_: the txn hash of the original request\n @param responseCode_: 0 is success, !0 = failure\n @param randomNumbers_: the array of random integers\n @param refundAddress_: the address for refund of native token not used for gas\n @param apiResponse_: the response from the off-chain rng provider\n @param apiSignature_: signature for the rng response\n @param feeCharged_: the fee for this rng"
+            },
+            "functionSelector": "97bfe15f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "serveRandomness",
+            "nameLocation": "8603:15:37",
+            "parameters": {
+              "id": 50926,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50908,
+                  "mutability": "mutable",
+                  "name": "arrngRequestId_",
+                  "nameLocation": "8633:15:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50928,
+                  "src": "8625:23:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50907,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8625:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50910,
+                  "mutability": "mutable",
+                  "name": "callingAddress_",
+                  "nameLocation": "8663:15:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50928,
+                  "src": "8655:23:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50909,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8655:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50912,
+                  "mutability": "mutable",
+                  "name": "requestTxnHash_",
+                  "nameLocation": "8693:15:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50928,
+                  "src": "8685:23:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 50911,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8685:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50914,
+                  "mutability": "mutable",
+                  "name": "responseCode_",
+                  "nameLocation": "8723:13:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50928,
+                  "src": "8715:21:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50913,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8715:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50917,
+                  "mutability": "mutable",
+                  "name": "randomNumbers_",
+                  "nameLocation": "8762:14:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50928,
+                  "src": "8743:33:37",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 50915,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "8743:7:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 50916,
+                    "nodeType": "ArrayTypeName",
+                    "src": "8743:9:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50919,
+                  "mutability": "mutable",
+                  "name": "refundAddress_",
+                  "nameLocation": "8791:14:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50928,
+                  "src": "8783:22:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50918,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8783:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50921,
+                  "mutability": "mutable",
+                  "name": "apiResponse_",
+                  "nameLocation": "8828:12:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50928,
+                  "src": "8812:28:37",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 50920,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8812:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50923,
+                  "mutability": "mutable",
+                  "name": "apiSignature_",
+                  "nameLocation": "8863:13:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50928,
+                  "src": "8847:29:37",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 50922,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8847:6:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50925,
+                  "mutability": "mutable",
+                  "name": "feeCharged_",
+                  "nameLocation": "8891:11:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50928,
+                  "src": "8883:19:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50924,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8883:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8618:289:37"
+            },
+            "returnParameters": {
+              "id": 50927,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "8924:0:37"
+            },
+            "scope": 50929,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IArrngController",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          50929
+        ],
+        "name": "IArrngController",
+        "nameLocation": "200:16:37",
+        "scope": 50930,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 37
+}

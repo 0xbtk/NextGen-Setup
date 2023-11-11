@@ -1,0 +1,278 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "randomNumber",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "randomWord",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "randomNumber()": "ccbac9f5",
+    "randomWord()": "f5684183"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"randomNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"randomWord\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Interfaces/IXRandoms.sol\":\"IXRandoms\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/Interfaces/IXRandoms.sol\":{\"keccak256\":\"0x3bd2ad638805964df3e6611edfefe6a34fcba79c8099e9eedf9906480f7b922c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://03ff8fd84c5c8fd4bcccf61b5b66208fe99c42eced8a1eda6662f03e977d31a1\",\"dweb:/ipfs/QmSVJUKirWcdNokyAVu3wE7SGeRQ71FtLAQeFYmZiSgGry\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "randomNumber",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "randomWord",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/Interfaces/IXRandoms.sol": "IXRandoms"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/Interfaces/IXRandoms.sol": {
+        "keccak256": "0x3bd2ad638805964df3e6611edfefe6a34fcba79c8099e9eedf9906480f7b922c",
+        "urls": [
+          "bzz-raw://03ff8fd84c5c8fd4bcccf61b5b66208fe99c42eced8a1eda6662f03e977d31a1",
+          "dweb:/ipfs/QmSVJUKirWcdNokyAVu3wE7SGeRQ71FtLAQeFYmZiSgGry"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/Interfaces/IXRandoms.sol",
+    "id": 44479,
+    "exportedSymbols": {
+      "IXRandoms": [
+        44478
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "35:190:24",
+    "nodes": [
+      {
+        "id": 44467,
+        "nodeType": "PragmaDirective",
+        "src": "35:24:24",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 44478,
+        "nodeType": "ContractDefinition",
+        "src": "63:162:24",
+        "nodes": [
+          {
+            "id": 44472,
+            "nodeType": "FunctionDefinition",
+            "src": "92:56:24",
+            "nodes": [],
+            "functionSelector": "ccbac9f5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "randomNumber",
+            "nameLocation": "101:12:24",
+            "parameters": {
+              "id": 44468,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "113:2:24"
+            },
+            "returnParameters": {
+              "id": 44471,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44470,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44472,
+                  "src": "139:7:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44469,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "139:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "138:9:24"
+            },
+            "scope": 44478,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 44477,
+            "nodeType": "FunctionDefinition",
+            "src": "156:60:24",
+            "nodes": [],
+            "functionSelector": "f5684183",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "randomWord",
+            "nameLocation": "165:10:24",
+            "parameters": {
+              "id": 44473,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "175:2:24"
+            },
+            "returnParameters": {
+              "id": 44476,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44475,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44477,
+                  "src": "201:13:24",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 44474,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "201:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "200:15:24"
+            },
+            "scope": 44478,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IXRandoms",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          44478
+        ],
+        "name": "IXRandoms",
+        "nameLocation": "73:9:24",
+        "scope": 44479,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 24
+}

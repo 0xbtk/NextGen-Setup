@@ -1,0 +1,2705 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_wallet1",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_wallet2",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_collectionAddress",
+          "type": "address"
+        }
+      ],
+      "name": "checkConsolidationStatus",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_delegationAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_collectionAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_date",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_useCase",
+          "type": "uint256"
+        }
+      ],
+      "name": "retrieveActiveDelegators",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_delegatorAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_collectionAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_useCase",
+          "type": "uint256"
+        }
+      ],
+      "name": "retrieveDelegationAddresses",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_delegationAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_collectionAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_useCase",
+          "type": "uint256"
+        }
+      ],
+      "name": "retrieveDelegators",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_delegatorAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_collectionAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_delegationAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_useCase",
+          "type": "uint256"
+        }
+      ],
+      "name": "retrieveGlobalStatusOfDelegation",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_delegatorAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_collectionAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_useCase",
+          "type": "uint256"
+        }
+      ],
+      "name": "retrieveMostRecentDelegation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_delegationAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_collectionAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_useCase",
+          "type": "uint256"
+        }
+      ],
+      "name": "retrieveMostRecentDelegator",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_delegatorAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_collectionAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_delegationAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_date",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_useCase",
+          "type": "uint256"
+        }
+      ],
+      "name": "retrieveStatusOfActiveDelegator",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_delegatorAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_collectionAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_delegationAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_useCase",
+          "type": "uint256"
+        }
+      ],
+      "name": "retrieveStatusOfMostRecentDelegation",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_delegatorAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_collectionAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_delegationAddress",
+          "type": "address"
+        }
+      ],
+      "name": "retrieveSubDelegationStatus",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_delegatorAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_collectionAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_delegationAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_useCase",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "retrieveTokenStatus",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "checkConsolidationStatus(address,address,address)": "8bb60cb6",
+    "retrieveActiveDelegators(address,address,uint256,uint256)": "c7cc4bb4",
+    "retrieveDelegationAddresses(address,address,uint256)": "22b613ef",
+    "retrieveDelegators(address,address,uint256)": "6cfcae20",
+    "retrieveGlobalStatusOfDelegation(address,address,address,uint256)": "d986ff6d",
+    "retrieveMostRecentDelegation(address,address,uint256)": "73aedfff",
+    "retrieveMostRecentDelegator(address,address,uint256)": "3465ef11",
+    "retrieveStatusOfActiveDelegator(address,address,address,uint256,uint256)": "234dd639",
+    "retrieveStatusOfMostRecentDelegation(address,address,address,uint256)": "782740d5",
+    "retrieveSubDelegationStatus(address,address,address)": "5e5b57a2",
+    "retrieveTokenStatus(address,address,address,uint256,uint256)": "16eca993"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_wallet1\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_wallet2\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_collectionAddress\",\"type\":\"address\"}],\"name\":\"checkConsolidationStatus\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_delegationAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_collectionAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_date\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_useCase\",\"type\":\"uint256\"}],\"name\":\"retrieveActiveDelegators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_delegatorAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_collectionAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_useCase\",\"type\":\"uint256\"}],\"name\":\"retrieveDelegationAddresses\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_delegationAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_collectionAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_useCase\",\"type\":\"uint256\"}],\"name\":\"retrieveDelegators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_delegatorAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_collectionAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_delegationAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_useCase\",\"type\":\"uint256\"}],\"name\":\"retrieveGlobalStatusOfDelegation\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_delegatorAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_collectionAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_useCase\",\"type\":\"uint256\"}],\"name\":\"retrieveMostRecentDelegation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_delegationAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_collectionAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_useCase\",\"type\":\"uint256\"}],\"name\":\"retrieveMostRecentDelegator\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_delegatorAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_collectionAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_delegationAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_date\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_useCase\",\"type\":\"uint256\"}],\"name\":\"retrieveStatusOfActiveDelegator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_delegatorAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_collectionAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_delegationAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_useCase\",\"type\":\"uint256\"}],\"name\":\"retrieveStatusOfMostRecentDelegation\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_delegatorAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_collectionAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_delegationAddress\",\"type\":\"address\"}],\"name\":\"retrieveSubDelegationStatus\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_delegatorAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_collectionAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_delegationAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_useCase\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"retrieveTokenStatus\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface module which provides a basic access control mechanism of the NFT Delegation Smart Contract\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"checkConsolidationStatus(address,address,address)\":{\"notice\":\"This function checks the Consolidation status between 2 addresses\"},\"retrieveActiveDelegators(address,address,uint256,uint256)\":{\"notice\":\"Returns an array of all active delegators on a certain date for a specific use case on a specific NFT collection given a delegation Address\"},\"retrieveDelegationAddresses(address,address,uint256)\":{\"notice\":\"Returns an array of all delegation addresses (active AND inactive) assigned by a delegator for a specific use case on a specific NFT collection\"},\"retrieveDelegators(address,address,uint256)\":{\"notice\":\"Returns an array of all delegators (active AND inactive) that delegated to a delegationAddress for a specific use case on a specific NFT collection\"},\"retrieveGlobalStatusOfDelegation(address,address,address,uint256)\":{\"notice\":\"Returns the status of a delegation given the delegator address as well as the delegation address\"},\"retrieveMostRecentDelegation(address,address,uint256)\":{\"notice\":\"Returns the most recent delegation address delegated for a specific use case on a specific NFT collection\"},\"retrieveMostRecentDelegator(address,address,uint256)\":{\"notice\":\"Returns the most recent delegator for a specific use case on a specific NFT collection given a delegation Address\"},\"retrieveStatusOfActiveDelegator(address,address,address,uint256,uint256)\":{\"notice\":\"Checks the status of an active delegator for a delegation Address\"},\"retrieveStatusOfMostRecentDelegation(address,address,address,uint256)\":{\"notice\":\"Checks if the delegation address performing actions is the most recent delegated by the specific delegator\"},\"retrieveSubDelegationStatus(address,address,address)\":{\"notice\":\"Checks if a delegator granted subdelegation status to an Address\"},\"retrieveTokenStatus(address,address,address,uint256,uint256)\":{\"notice\":\"Returns the status of a delegation given the delegator address, the collection address, the delegation address as well as a specific token id\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Interfaces/IDelegationManagementContract.sol\":\"IDelegationManagementContract\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/Interfaces/IDelegationManagementContract.sol\":{\"keccak256\":\"0xa17584aae12752cf8d3046fcd99bfb7885295cb10e2587b0ef3d69885ba0df1c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3f4095832e3c71d9f6a9ff1067e9f889c34622972a8dbeb4a7be20afd56c6505\",\"dweb:/ipfs/QmcJknfS7eP6uhGg4ZGhUedzRfNvqpkkoojxKcCNfipF2v\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_wallet1",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_wallet2",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_collectionAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "checkConsolidationStatus",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_delegationAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_collectionAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_date",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_useCase",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "retrieveActiveDelegators",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_delegatorAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_collectionAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_useCase",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "retrieveDelegationAddresses",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_delegationAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_collectionAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_useCase",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "retrieveDelegators",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_delegatorAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_collectionAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_delegationAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_useCase",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "retrieveGlobalStatusOfDelegation",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_delegatorAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_collectionAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_useCase",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "retrieveMostRecentDelegation",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_delegationAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_collectionAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_useCase",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "retrieveMostRecentDelegator",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_delegatorAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_collectionAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_delegationAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_date",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_useCase",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "retrieveStatusOfActiveDelegator",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_delegatorAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_collectionAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_delegationAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_useCase",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "retrieveStatusOfMostRecentDelegation",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_delegatorAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_collectionAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_delegationAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "retrieveSubDelegationStatus",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_delegatorAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_collectionAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_delegationAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_useCase",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "retrieveTokenStatus",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "checkConsolidationStatus(address,address,address)": {
+            "notice": "This function checks the Consolidation status between 2 addresses"
+          },
+          "retrieveActiveDelegators(address,address,uint256,uint256)": {
+            "notice": "Returns an array of all active delegators on a certain date for a specific use case on a specific NFT collection given a delegation Address"
+          },
+          "retrieveDelegationAddresses(address,address,uint256)": {
+            "notice": "Returns an array of all delegation addresses (active AND inactive) assigned by a delegator for a specific use case on a specific NFT collection"
+          },
+          "retrieveDelegators(address,address,uint256)": {
+            "notice": "Returns an array of all delegators (active AND inactive) that delegated to a delegationAddress for a specific use case on a specific NFT collection"
+          },
+          "retrieveGlobalStatusOfDelegation(address,address,address,uint256)": {
+            "notice": "Returns the status of a delegation given the delegator address as well as the delegation address"
+          },
+          "retrieveMostRecentDelegation(address,address,uint256)": {
+            "notice": "Returns the most recent delegation address delegated for a specific use case on a specific NFT collection"
+          },
+          "retrieveMostRecentDelegator(address,address,uint256)": {
+            "notice": "Returns the most recent delegator for a specific use case on a specific NFT collection given a delegation Address"
+          },
+          "retrieveStatusOfActiveDelegator(address,address,address,uint256,uint256)": {
+            "notice": "Checks the status of an active delegator for a delegation Address"
+          },
+          "retrieveStatusOfMostRecentDelegation(address,address,address,uint256)": {
+            "notice": "Checks if the delegation address performing actions is the most recent delegated by the specific delegator"
+          },
+          "retrieveSubDelegationStatus(address,address,address)": {
+            "notice": "Checks if a delegator granted subdelegation status to an Address"
+          },
+          "retrieveTokenStatus(address,address,address,uint256,uint256)": {
+            "notice": "Returns the status of a delegation given the delegator address, the collection address, the delegation address as well as a specific token id"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/Interfaces/IDelegationManagementContract.sol": "IDelegationManagementContract"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/Interfaces/IDelegationManagementContract.sol": {
+        "keccak256": "0xa17584aae12752cf8d3046fcd99bfb7885295cb10e2587b0ef3d69885ba0df1c",
+        "urls": [
+          "bzz-raw://3f4095832e3c71d9f6a9ff1067e9f889c34622972a8dbeb4a7be20afd56c6505",
+          "dweb:/ipfs/QmcJknfS7eP6uhGg4ZGhUedzRfNvqpkkoojxKcCNfipF2v"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/Interfaces/IDelegationManagementContract.sol",
+    "id": 40218,
+    "exportedSymbols": {
+      "IDelegationManagementContract": [
+        40217
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "35:3619:16",
+    "nodes": [
+      {
+        "id": 40066,
+        "nodeType": "PragmaDirective",
+        "src": "35:24:16",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 40217,
+        "nodeType": "ContractDefinition",
+        "src": "186:3468:16",
+        "nodes": [
+          {
+            "id": 40080,
+            "nodeType": "FunctionDefinition",
+            "src": "419:151:16",
+            "nodes": [],
+            "documentation": {
+              "id": 40068,
+              "nodeType": "StructuredDocumentation",
+              "src": "239:172:16",
+              "text": " @notice Returns an array of all delegation addresses (active AND inactive) assigned by a delegator for a specific use case on a specific NFT collection"
+            },
+            "functionSelector": "22b613ef",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "retrieveDelegationAddresses",
+            "nameLocation": "428:27:16",
+            "parameters": {
+              "id": 40075,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40070,
+                  "mutability": "mutable",
+                  "name": "_delegatorAddress",
+                  "nameLocation": "464:17:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40080,
+                  "src": "456:25:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40069,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "456:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40072,
+                  "mutability": "mutable",
+                  "name": "_collectionAddress",
+                  "nameLocation": "491:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40080,
+                  "src": "483:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40071,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "483:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40074,
+                  "mutability": "mutable",
+                  "name": "_useCase",
+                  "nameLocation": "519:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40080,
+                  "src": "511:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 40073,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "511:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "455:73:16"
+            },
+            "returnParameters": {
+              "id": 40079,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40078,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40080,
+                  "src": "552:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 40076,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "552:7:16",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 40077,
+                    "nodeType": "ArrayTypeName",
+                    "src": "552:9:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "551:18:16"
+            },
+            "scope": 40217,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 40093,
+            "nodeType": "FunctionDefinition",
+            "src": "767:143:16",
+            "nodes": [],
+            "documentation": {
+              "id": 40081,
+              "nodeType": "StructuredDocumentation",
+              "src": "582:176:16",
+              "text": " @notice Returns an array of all delegators (active AND inactive) that delegated to a delegationAddress for a specific use case on a specific NFT collection"
+            },
+            "functionSelector": "6cfcae20",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "retrieveDelegators",
+            "nameLocation": "776:18:16",
+            "parameters": {
+              "id": 40088,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40083,
+                  "mutability": "mutable",
+                  "name": "_delegationAddress",
+                  "nameLocation": "803:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40093,
+                  "src": "795:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40082,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "795:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40085,
+                  "mutability": "mutable",
+                  "name": "_collectionAddress",
+                  "nameLocation": "831:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40093,
+                  "src": "823:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40084,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "823:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40087,
+                  "mutability": "mutable",
+                  "name": "_useCase",
+                  "nameLocation": "859:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40093,
+                  "src": "851:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 40086,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "851:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "794:74:16"
+            },
+            "returnParameters": {
+              "id": 40092,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40091,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40093,
+                  "src": "892:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 40089,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "892:7:16",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 40090,
+                    "nodeType": "ArrayTypeName",
+                    "src": "892:9:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "891:18:16"
+            },
+            "scope": 40217,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 40108,
+            "nodeType": "FunctionDefinition",
+            "src": "1094:164:16",
+            "nodes": [],
+            "documentation": {
+              "id": 40094,
+              "nodeType": "StructuredDocumentation",
+              "src": "918:167:16",
+              "text": " @notice Returns an array of all active delegators on a certain date for a specific use case on a specific NFT collection given a delegation Address"
+            },
+            "functionSelector": "c7cc4bb4",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "retrieveActiveDelegators",
+            "nameLocation": "1103:24:16",
+            "parameters": {
+              "id": 40103,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40096,
+                  "mutability": "mutable",
+                  "name": "_delegationAddress",
+                  "nameLocation": "1136:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40108,
+                  "src": "1128:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40095,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1128:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40098,
+                  "mutability": "mutable",
+                  "name": "_collectionAddress",
+                  "nameLocation": "1164:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40108,
+                  "src": "1156:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40097,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1156:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40100,
+                  "mutability": "mutable",
+                  "name": "_date",
+                  "nameLocation": "1192:5:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40108,
+                  "src": "1184:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 40099,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1184:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40102,
+                  "mutability": "mutable",
+                  "name": "_useCase",
+                  "nameLocation": "1207:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40108,
+                  "src": "1199:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 40101,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1199:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1127:89:16"
+            },
+            "returnParameters": {
+              "id": 40107,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40106,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40108,
+                  "src": "1240:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 40104,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1240:7:16",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 40105,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1240:9:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1239:18:16"
+            },
+            "scope": 40217,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 40120,
+            "nodeType": "FunctionDefinition",
+            "src": "1409:143:16",
+            "nodes": [],
+            "documentation": {
+              "id": 40109,
+              "nodeType": "StructuredDocumentation",
+              "src": "1267:134:16",
+              "text": " @notice Returns the most recent delegation address delegated for a specific use case on a specific NFT collection"
+            },
+            "functionSelector": "73aedfff",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "retrieveMostRecentDelegation",
+            "nameLocation": "1418:28:16",
+            "parameters": {
+              "id": 40116,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40111,
+                  "mutability": "mutable",
+                  "name": "_delegatorAddress",
+                  "nameLocation": "1455:17:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40120,
+                  "src": "1447:25:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40110,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1447:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40113,
+                  "mutability": "mutable",
+                  "name": "_collectionAddress",
+                  "nameLocation": "1482:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40120,
+                  "src": "1474:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40112,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1474:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40115,
+                  "mutability": "mutable",
+                  "name": "_useCase",
+                  "nameLocation": "1510:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40120,
+                  "src": "1502:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 40114,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1502:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1446:73:16"
+            },
+            "returnParameters": {
+              "id": 40119,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40118,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40120,
+                  "src": "1543:7:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40117,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1543:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1542:9:16"
+            },
+            "scope": 40217,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 40132,
+            "nodeType": "FunctionDefinition",
+            "src": "1710:143:16",
+            "nodes": [],
+            "documentation": {
+              "id": 40121,
+              "nodeType": "StructuredDocumentation",
+              "src": "1560:142:16",
+              "text": " @notice Returns the most recent delegator for a specific use case on a specific NFT collection given a delegation Address"
+            },
+            "functionSelector": "3465ef11",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "retrieveMostRecentDelegator",
+            "nameLocation": "1719:27:16",
+            "parameters": {
+              "id": 40128,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40123,
+                  "mutability": "mutable",
+                  "name": "_delegationAddress",
+                  "nameLocation": "1755:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40132,
+                  "src": "1747:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40122,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1747:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40125,
+                  "mutability": "mutable",
+                  "name": "_collectionAddress",
+                  "nameLocation": "1783:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40132,
+                  "src": "1775:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40124,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1775:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40127,
+                  "mutability": "mutable",
+                  "name": "_useCase",
+                  "nameLocation": "1811:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40132,
+                  "src": "1803:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 40126,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1803:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1746:74:16"
+            },
+            "returnParameters": {
+              "id": 40131,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40130,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40132,
+                  "src": "1844:7:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40129,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1844:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1843:9:16"
+            },
+            "scope": 40217,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 40146,
+            "nodeType": "FunctionDefinition",
+            "src": "1994:172:16",
+            "nodes": [],
+            "documentation": {
+              "id": 40133,
+              "nodeType": "StructuredDocumentation",
+              "src": "1861:125:16",
+              "text": " @notice Returns the status of a delegation given the delegator address as well as the delegation address"
+            },
+            "functionSelector": "d986ff6d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "retrieveGlobalStatusOfDelegation",
+            "nameLocation": "2003:32:16",
+            "parameters": {
+              "id": 40142,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40135,
+                  "mutability": "mutable",
+                  "name": "_delegatorAddress",
+                  "nameLocation": "2044:17:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40146,
+                  "src": "2036:25:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40134,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2036:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40137,
+                  "mutability": "mutable",
+                  "name": "_collectionAddress",
+                  "nameLocation": "2071:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40146,
+                  "src": "2063:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40136,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2063:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40139,
+                  "mutability": "mutable",
+                  "name": "_delegationAddress",
+                  "nameLocation": "2099:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40146,
+                  "src": "2091:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40138,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2091:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40141,
+                  "mutability": "mutable",
+                  "name": "_useCase",
+                  "nameLocation": "2127:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40146,
+                  "src": "2119:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 40140,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2119:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2035:101:16"
+            },
+            "returnParameters": {
+              "id": 40145,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40144,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40146,
+                  "src": "2160:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 40143,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2160:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2159:6:16"
+            },
+            "scope": 40217,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 40162,
+            "nodeType": "FunctionDefinition",
+            "src": "2352:177:16",
+            "nodes": [],
+            "documentation": {
+              "id": 40147,
+              "nodeType": "StructuredDocumentation",
+              "src": "2174:170:16",
+              "text": " @notice Returns the status of a delegation given the delegator address, the collection address, the delegation address as well as a specific token id"
+            },
+            "functionSelector": "16eca993",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "retrieveTokenStatus",
+            "nameLocation": "2361:19:16",
+            "parameters": {
+              "id": 40158,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40149,
+                  "mutability": "mutable",
+                  "name": "_delegatorAddress",
+                  "nameLocation": "2389:17:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40162,
+                  "src": "2381:25:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40148,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2381:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40151,
+                  "mutability": "mutable",
+                  "name": "_collectionAddress",
+                  "nameLocation": "2416:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40162,
+                  "src": "2408:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40150,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2408:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40153,
+                  "mutability": "mutable",
+                  "name": "_delegationAddress",
+                  "nameLocation": "2444:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40162,
+                  "src": "2436:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40152,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2436:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40155,
+                  "mutability": "mutable",
+                  "name": "_useCase",
+                  "nameLocation": "2472:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40162,
+                  "src": "2464:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 40154,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2464:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40157,
+                  "mutability": "mutable",
+                  "name": "_tokenId",
+                  "nameLocation": "2490:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40162,
+                  "src": "2482:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 40156,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2482:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2380:119:16"
+            },
+            "returnParameters": {
+              "id": 40161,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40160,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40162,
+                  "src": "2523:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 40159,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2523:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2522:6:16"
+            },
+            "scope": 40217,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 40176,
+            "nodeType": "FunctionDefinition",
+            "src": "2680:176:16",
+            "nodes": [],
+            "documentation": {
+              "id": 40163,
+              "nodeType": "StructuredDocumentation",
+              "src": "2537:135:16",
+              "text": " @notice Checks if the delegation address performing actions is the most recent delegated by the specific delegator"
+            },
+            "functionSelector": "782740d5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "retrieveStatusOfMostRecentDelegation",
+            "nameLocation": "2689:36:16",
+            "parameters": {
+              "id": 40172,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40165,
+                  "mutability": "mutable",
+                  "name": "_delegatorAddress",
+                  "nameLocation": "2734:17:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40176,
+                  "src": "2726:25:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40164,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2726:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40167,
+                  "mutability": "mutable",
+                  "name": "_collectionAddress",
+                  "nameLocation": "2761:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40176,
+                  "src": "2753:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40166,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2753:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40169,
+                  "mutability": "mutable",
+                  "name": "_delegationAddress",
+                  "nameLocation": "2789:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40176,
+                  "src": "2781:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40168,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2781:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40171,
+                  "mutability": "mutable",
+                  "name": "_useCase",
+                  "nameLocation": "2817:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40176,
+                  "src": "2809:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 40170,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2809:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2725:101:16"
+            },
+            "returnParameters": {
+              "id": 40175,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40174,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40176,
+                  "src": "2850:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 40173,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2850:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2849:6:16"
+            },
+            "scope": 40217,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 40188,
+            "nodeType": "FunctionDefinition",
+            "src": "2966:149:16",
+            "nodes": [],
+            "documentation": {
+              "id": 40177,
+              "nodeType": "StructuredDocumentation",
+              "src": "2865:93:16",
+              "text": " @notice Checks if a delegator granted subdelegation status to an Address"
+            },
+            "functionSelector": "5e5b57a2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "retrieveSubDelegationStatus",
+            "nameLocation": "2975:27:16",
+            "parameters": {
+              "id": 40184,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40179,
+                  "mutability": "mutable",
+                  "name": "_delegatorAddress",
+                  "nameLocation": "3011:17:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40188,
+                  "src": "3003:25:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40178,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3003:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40181,
+                  "mutability": "mutable",
+                  "name": "_collectionAddress",
+                  "nameLocation": "3038:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40188,
+                  "src": "3030:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40180,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3030:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40183,
+                  "mutability": "mutable",
+                  "name": "_delegationAddress",
+                  "nameLocation": "3066:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40188,
+                  "src": "3058:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40182,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3058:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3002:83:16"
+            },
+            "returnParameters": {
+              "id": 40187,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40186,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40188,
+                  "src": "3109:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 40185,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3109:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3108:6:16"
+            },
+            "scope": 40217,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 40204,
+            "nodeType": "FunctionDefinition",
+            "src": "3226:186:16",
+            "nodes": [],
+            "documentation": {
+              "id": 40189,
+              "nodeType": "StructuredDocumentation",
+              "src": "3124:94:16",
+              "text": " @notice Checks the status of an active delegator for a delegation Address"
+            },
+            "functionSelector": "234dd639",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "retrieveStatusOfActiveDelegator",
+            "nameLocation": "3235:31:16",
+            "parameters": {
+              "id": 40200,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40191,
+                  "mutability": "mutable",
+                  "name": "_delegatorAddress",
+                  "nameLocation": "3275:17:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40204,
+                  "src": "3267:25:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40190,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3267:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40193,
+                  "mutability": "mutable",
+                  "name": "_collectionAddress",
+                  "nameLocation": "3302:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40204,
+                  "src": "3294:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40192,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3294:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40195,
+                  "mutability": "mutable",
+                  "name": "_delegationAddress",
+                  "nameLocation": "3330:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40204,
+                  "src": "3322:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40194,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3322:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40197,
+                  "mutability": "mutable",
+                  "name": "_date",
+                  "nameLocation": "3358:5:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40204,
+                  "src": "3350:13:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 40196,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3350:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40199,
+                  "mutability": "mutable",
+                  "name": "_useCase",
+                  "nameLocation": "3373:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40204,
+                  "src": "3365:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 40198,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3365:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3266:116:16"
+            },
+            "returnParameters": {
+              "id": 40203,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40202,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40204,
+                  "src": "3406:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 40201,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3406:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3405:6:16"
+            },
+            "scope": 40217,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 40216,
+            "nodeType": "FunctionDefinition",
+            "src": "3522:127:16",
+            "nodes": [],
+            "documentation": {
+              "id": 40205,
+              "nodeType": "StructuredDocumentation",
+              "src": "3420:94:16",
+              "text": " @notice This function checks the Consolidation status between 2 addresses"
+            },
+            "functionSelector": "8bb60cb6",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkConsolidationStatus",
+            "nameLocation": "3531:24:16",
+            "parameters": {
+              "id": 40212,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40207,
+                  "mutability": "mutable",
+                  "name": "_wallet1",
+                  "nameLocation": "3564:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40216,
+                  "src": "3556:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40206,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3556:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40209,
+                  "mutability": "mutable",
+                  "name": "_wallet2",
+                  "nameLocation": "3582:8:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40216,
+                  "src": "3574:16:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40208,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3574:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40211,
+                  "mutability": "mutable",
+                  "name": "_collectionAddress",
+                  "nameLocation": "3600:18:16",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40216,
+                  "src": "3592:26:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 40210,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3592:7:16",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3555:64:16"
+            },
+            "returnParameters": {
+              "id": 40215,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 40214,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 40216,
+                  "src": "3643:4:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 40213,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3643:4:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3642:6:16"
+            },
+            "scope": 40217,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IDelegationManagementContract",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 40067,
+          "nodeType": "StructuredDocumentation",
+          "src": "63:119:16",
+          "text": " @dev Interface module which provides a basic access control mechanism of the NFT Delegation Smart Contract"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          40217
+        ],
+        "name": "IDelegationManagementContract",
+        "nameLocation": "196:29:16",
+        "scope": 40218,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 16
+}

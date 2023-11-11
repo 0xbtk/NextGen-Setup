@@ -1,0 +1,253 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "arrngRequestId_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "randomNumbers_",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "receiveRandomness",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "receiveRandomness(uint256,uint256[])": "37f9c70d"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"arrngRequestId_\",\"type\":\"uint256\"},{\"internalType\":\"uint256[]\",\"name\":\"randomNumbers_\",\"type\":\"uint256[]\"}],\"name\":\"receiveRandomness\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"receiveRandomness(uint256,uint256[])\":{\"details\":\"receiveRandomness: receive randomness\",\"params\":{\"arrngRequestId_\":\": unique ID for this request\",\"randomNumbers_\":\": array of random integers requested\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/arrng/IArrngConsumer.sol\":\"IArrngConsumer\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/arrng/IArrngConsumer.sol\":{\"keccak256\":\"0x558d33803acf0c167eccac9d5ab88ecd8bb114c9ff21bcc689a985da7866bc28\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1d08b32b3e9c4ccca348a8d735a5723cff6e9ca037c068422bb02f51b65a04b6\",\"dweb:/ipfs/QmTMQZuSApkBH6MrKRMWB6aSLV1ExNNV88KSsMXdGPRh1h\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "arrngRequestId_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "randomNumbers_",
+              "type": "uint256[]"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "receiveRandomness"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "receiveRandomness(uint256,uint256[])": {
+            "details": "receiveRandomness: receive randomness",
+            "params": {
+              "arrngRequestId_": ": unique ID for this request",
+              "randomNumbers_": ": array of random integers requested"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/arrng/IArrngConsumer.sol": "IArrngConsumer"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/arrng/IArrngConsumer.sol": {
+        "keccak256": "0x558d33803acf0c167eccac9d5ab88ecd8bb114c9ff21bcc689a985da7866bc28",
+        "urls": [
+          "bzz-raw://1d08b32b3e9c4ccca348a8d735a5723cff6e9ca037c068422bb02f51b65a04b6",
+          "dweb:/ipfs/QmTMQZuSApkBH6MrKRMWB6aSLV1ExNNV88KSsMXdGPRh1h"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/arrng/IArrngConsumer.sol",
+    "id": 50704,
+    "exportedSymbols": {
+      "IArrngConsumer": [
+        50703
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "136:381:36",
+    "nodes": [
+      {
+        "id": 50693,
+        "nodeType": "PragmaDirective",
+        "src": "136:23:36",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 50703,
+        "nodeType": "ContractDefinition",
+        "src": "163:354:36",
+        "nodes": [
+          {
+            "id": 50702,
+            "nodeType": "FunctionDefinition",
+            "src": "395:119:36",
+            "nodes": [],
+            "documentation": {
+              "id": 50694,
+              "nodeType": "StructuredDocumentation",
+              "src": "193:198:36",
+              "text": " @dev receiveRandomness: receive randomness\n @param arrngRequestId_: unique ID for this request\n @param randomNumbers_: array of random integers requested"
+            },
+            "functionSelector": "37f9c70d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "receiveRandomness",
+            "nameLocation": "404:17:36",
+            "parameters": {
+              "id": 50700,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50696,
+                  "mutability": "mutable",
+                  "name": "arrngRequestId_",
+                  "nameLocation": "436:15:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50702,
+                  "src": "428:23:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50695,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "428:7:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50699,
+                  "mutability": "mutable",
+                  "name": "randomNumbers_",
+                  "nameLocation": "477:14:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50702,
+                  "src": "458:33:36",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 50697,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "458:7:36",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 50698,
+                    "nodeType": "ArrayTypeName",
+                    "src": "458:9:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "421:75:36"
+            },
+            "returnParameters": {
+              "id": 50701,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "513:0:36"
+            },
+            "scope": 50703,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IArrngConsumer",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          50703
+        ],
+        "name": "IArrngConsumer",
+        "nameLocation": "173:14:36",
+        "scope": 50704,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 36
+}

@@ -1,0 +1,908 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "arrngController",
+      "outputs": [
+        {
+          "internalType": "contract IArrngController",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "arrngRequestId_",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "randomNumbers_",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "receiveRandomness",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "arrngController()": "9d014275",
+    "receiveRandomness(uint256,uint256[])": "37f9c70d"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"arrngController\",\"outputs\":[{\"internalType\":\"contract IArrngController\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"arrngRequestId_\",\"type\":\"uint256\"},{\"internalType\":\"uint256[]\",\"name\":\"randomNumbers_\",\"type\":\"uint256[]\"}],\"name\":\"receiveRandomness\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"constructor\"},\"receiveRandomness(uint256,uint256[])\":{\"details\":\"receiveRandomness: receive RNG\",\"params\":{\"arrngRequestId_\":\": unique ID for this request\",\"randomNumbers_\":\": array of random integers requested\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/arrng/ArrngConsumer.sol\":\"ArrngConsumer\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/arrng/ArrngConsumer.sol\":{\"keccak256\":\"0x721fa3862c63e9a2a5f72592ac917dab65e2fad2849c66929d2d1807e2694655\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cdcb6fa78694eccf03e2a92d108ded2ba1d0e5ccd196d5b8882f5a2e5bb7639b\",\"dweb:/ipfs/QmdX4CQe7v8U38KaDsUdJpnEh6ba4pYhPysafrdDDQR7o6\"]},\"src/arrng/IArrngConsumer.sol\":{\"keccak256\":\"0x558d33803acf0c167eccac9d5ab88ecd8bb114c9ff21bcc689a985da7866bc28\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1d08b32b3e9c4ccca348a8d735a5723cff6e9ca037c068422bb02f51b65a04b6\",\"dweb:/ipfs/QmTMQZuSApkBH6MrKRMWB6aSLV1ExNNV88KSsMXdGPRh1h\"]},\"src/arrng/IArrngController.sol\":{\"keccak256\":\"0x33d57eee311e463974abe7bb07a5d608196ce583e02fb9ce66feffa110eba26f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8302945fcd89f6654465f5261dd14905af1777d9e3fe905102bc37941b18a91d\",\"dweb:/ipfs/QmcQihdry61N11XjrZfK1aAttsqPMB6famwWupCDNnoGhT\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "arrngController",
+          "outputs": [
+            {
+              "internalType": "contract IArrngController",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "arrngRequestId_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "randomNumbers_",
+              "type": "uint256[]"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "receiveRandomness"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "constructor": {
+            "details": "constructor"
+          },
+          "receiveRandomness(uint256,uint256[])": {
+            "details": "receiveRandomness: receive RNG",
+            "params": {
+              "arrngRequestId_": ": unique ID for this request",
+              "randomNumbers_": ": array of random integers requested"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/arrng/ArrngConsumer.sol": "ArrngConsumer"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/arrng/ArrngConsumer.sol": {
+        "keccak256": "0x721fa3862c63e9a2a5f72592ac917dab65e2fad2849c66929d2d1807e2694655",
+        "urls": [
+          "bzz-raw://cdcb6fa78694eccf03e2a92d108ded2ba1d0e5ccd196d5b8882f5a2e5bb7639b",
+          "dweb:/ipfs/QmdX4CQe7v8U38KaDsUdJpnEh6ba4pYhPysafrdDDQR7o6"
+        ],
+        "license": "MIT"
+      },
+      "src/arrng/IArrngConsumer.sol": {
+        "keccak256": "0x558d33803acf0c167eccac9d5ab88ecd8bb114c9ff21bcc689a985da7866bc28",
+        "urls": [
+          "bzz-raw://1d08b32b3e9c4ccca348a8d735a5723cff6e9ca037c068422bb02f51b65a04b6",
+          "dweb:/ipfs/QmTMQZuSApkBH6MrKRMWB6aSLV1ExNNV88KSsMXdGPRh1h"
+        ],
+        "license": "MIT"
+      },
+      "src/arrng/IArrngController.sol": {
+        "keccak256": "0x33d57eee311e463974abe7bb07a5d608196ce583e02fb9ce66feffa110eba26f",
+        "urls": [
+          "bzz-raw://8302945fcd89f6654465f5261dd14905af1777d9e3fe905102bc37941b18a91d",
+          "dweb:/ipfs/QmcQihdry61N11XjrZfK1aAttsqPMB6famwWupCDNnoGhT"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/arrng/ArrngConsumer.sol",
+    "id": 50692,
+    "exportedSymbols": {
+      "ArrngConsumer": [
+        50691
+      ],
+      "IArrngConsumer": [
+        50703
+      ],
+      "IArrngController": [
+        50929
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "135:1181:35",
+    "nodes": [
+      {
+        "id": 50634,
+        "nodeType": "ImportDirective",
+        "src": "135:52:35",
+        "nodes": [],
+        "absolutePath": "src/arrng/IArrngConsumer.sol",
+        "file": "./IArrngConsumer.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 50692,
+        "sourceUnit": 50704,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 50633,
+              "name": "IArrngConsumer",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 50703,
+              "src": "143:14:35",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 50636,
+        "nodeType": "ImportDirective",
+        "src": "189:56:35",
+        "nodes": [],
+        "absolutePath": "src/arrng/IArrngController.sol",
+        "file": "./IArrngController.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 50692,
+        "sourceUnit": 50930,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 50635,
+              "name": "IArrngController",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 50929,
+              "src": "197:16:35",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 50637,
+        "nodeType": "PragmaDirective",
+        "src": "249:23:35",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 50691,
+        "nodeType": "ContractDefinition",
+        "src": "276:1040:35",
+        "nodes": [
+          {
+            "id": 50642,
+            "nodeType": "VariableDeclaration",
+            "src": "331:49:35",
+            "nodes": [],
+            "constant": false,
+            "functionSelector": "9d014275",
+            "mutability": "immutable",
+            "name": "arrngController",
+            "nameLocation": "365:15:35",
+            "scope": 50691,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IArrngController_$50929",
+              "typeString": "contract IArrngController"
+            },
+            "typeName": {
+              "id": 50641,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 50640,
+                "name": "IArrngController",
+                "nameLocations": [
+                  "331:16:35"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 50929,
+                "src": "331:16:35"
+              },
+              "referencedDeclaration": 50929,
+              "src": "331:16:35",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IArrngController_$50929",
+                "typeString": "contract IArrngController"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 50655,
+            "nodeType": "FunctionDefinition",
+            "src": "424:103:35",
+            "nodes": [],
+            "body": {
+              "id": 50654,
+              "nodeType": "Block",
+              "src": "462:65:35",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 50652,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 50648,
+                      "name": "arrngController",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 50642,
+                      "src": "469:15:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IArrngController_$50929",
+                        "typeString": "contract IArrngController"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 50650,
+                          "name": "arrngController_",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 50645,
+                          "src": "504:16:35",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 50649,
+                        "name": "IArrngController",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 50929,
+                        "src": "487:16:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IArrngController_$50929_$",
+                          "typeString": "type(contract IArrngController)"
+                        }
+                      },
+                      "id": 50651,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "487:34:35",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IArrngController_$50929",
+                        "typeString": "contract IArrngController"
+                      }
+                    },
+                    "src": "469:52:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IArrngController_$50929",
+                      "typeString": "contract IArrngController"
+                    }
+                  },
+                  "id": 50653,
+                  "nodeType": "ExpressionStatement",
+                  "src": "469:52:35"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 50643,
+              "nodeType": "StructuredDocumentation",
+              "src": "387:33:35",
+              "text": " @dev constructor"
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 50646,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50645,
+                  "mutability": "mutable",
+                  "name": "arrngController_",
+                  "nameLocation": "444:16:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50655,
+                  "src": "436:24:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 50644,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "436:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "435:26:35"
+            },
+            "returnParameters": {
+              "id": 50647,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "462:0:35"
+            },
+            "scope": 50691,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 50664,
+            "nodeType": "FunctionDefinition",
+            "src": "741:109:35",
+            "nodes": [],
+            "documentation": {
+              "id": 50656,
+              "nodeType": "StructuredDocumentation",
+              "src": "533:204:35",
+              "text": " @dev fulfillRandomWords: Do something with the randomness\n @param requestId: unique ID for this request\n @param randomWords: array of random integers requested"
+            },
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "fulfillRandomWords",
+            "nameLocation": "750:18:35",
+            "parameters": {
+              "id": 50662,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50658,
+                  "mutability": "mutable",
+                  "name": "requestId",
+                  "nameLocation": "783:9:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50664,
+                  "src": "775:17:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50657,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "775:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50661,
+                  "mutability": "mutable",
+                  "name": "randomWords",
+                  "nameLocation": "816:11:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50664,
+                  "src": "799:28:35",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 50659,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "799:7:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 50660,
+                    "nodeType": "ArrayTypeName",
+                    "src": "799:9:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "768:64:35"
+            },
+            "returnParameters": {
+              "id": 50663,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "849:0:35"
+            },
+            "scope": 50691,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "internal"
+          },
+          {
+            "id": 50690,
+            "nodeType": "FunctionDefinition",
+            "src": "1051:262:35",
+            "nodes": [],
+            "body": {
+              "id": 50689,
+              "nodeType": "Block",
+              "src": "1170:143:35",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 50680,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "id": 50674,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "1185:3:35",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 50675,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "1189:6:35",
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "1185:10:35",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "arguments": [
+                            {
+                              "id": 50678,
+                              "name": "arrngController",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 50642,
+                              "src": "1207:15:35",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_IArrngController_$50929",
+                                "typeString": "contract IArrngController"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_IArrngController_$50929",
+                                "typeString": "contract IArrngController"
+                              }
+                            ],
+                            "id": 50677,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1199:7:35",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": {
+                              "id": 50676,
+                              "name": "address",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "1199:7:35",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 50679,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1199:24:35",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "1185:38:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "6172726e6720636f6e74726f6c6c6572206f6e6c79",
+                        "id": 50681,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1225:23:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_ddb24578f055498ae6b2c69f98d9f017a053d29a83d1cbc84c649748d5971cde",
+                          "typeString": "literal_string \"arrng controller only\""
+                        },
+                        "value": "arrng controller only"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_ddb24578f055498ae6b2c69f98d9f017a053d29a83d1cbc84c649748d5971cde",
+                          "typeString": "literal_string \"arrng controller only\""
+                        }
+                      ],
+                      "id": 50673,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1177:7:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 50682,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1177:72:35",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 50683,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1177:72:35"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 50685,
+                        "name": "arrngRequestId_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 50667,
+                        "src": "1275:15:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 50686,
+                        "name": "randomNumbers_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 50670,
+                        "src": "1292:14:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                          "typeString": "uint256[] calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                          "typeString": "uint256[] calldata"
+                        }
+                      ],
+                      "id": 50684,
+                      "name": "fulfillRandomWords",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 50664,
+                      "src": "1256:18:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_array$_t_uint256_$dyn_memory_ptr_$returns$__$",
+                        "typeString": "function (uint256,uint256[] memory)"
+                      }
+                    },
+                    "id": 50687,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1256:51:35",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 50688,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1256:51:35"
+                }
+              ]
+            },
+            "baseFunctions": [
+              50702
+            ],
+            "documentation": {
+              "id": 50665,
+              "nodeType": "StructuredDocumentation",
+              "src": "856:191:35",
+              "text": " @dev receiveRandomness: receive RNG\n @param arrngRequestId_: unique ID for this request\n @param randomNumbers_: array of random integers requested"
+            },
+            "functionSelector": "37f9c70d",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "receiveRandomness",
+            "nameLocation": "1060:17:35",
+            "parameters": {
+              "id": 50671,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50667,
+                  "mutability": "mutable",
+                  "name": "arrngRequestId_",
+                  "nameLocation": "1092:15:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50690,
+                  "src": "1084:23:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 50666,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1084:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50670,
+                  "mutability": "mutable",
+                  "name": "randomNumbers_",
+                  "nameLocation": "1133:14:35",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50690,
+                  "src": "1114:33:35",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 50668,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1114:7:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 50669,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1114:9:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1077:75:35"
+            },
+            "returnParameters": {
+              "id": 50672,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1170:0:35"
+            },
+            "scope": 50691,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 50638,
+              "name": "IArrngConsumer",
+              "nameLocations": [
+                "311:14:35"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 50703,
+              "src": "311:14:35"
+            },
+            "id": 50639,
+            "nodeType": "InheritanceSpecifier",
+            "src": "311:14:35"
+          }
+        ],
+        "canonicalName": "ArrngConsumer",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          50691,
+          50703
+        ],
+        "name": "ArrngConsumer",
+        "nameLocation": "294:13:35",
+        "scope": 50692,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 35
+}
